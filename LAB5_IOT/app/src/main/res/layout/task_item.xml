@@ -7,142 +7,97 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_height="120dp"
         android:orientation="horizontal"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!--android:background="@drawable/background_chat_item"-->
-
         <LinearLayout
-            android:layout_width="320dp"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="36dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <LinearLayout
-                    android:layout_width="143dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:paddingStart="12dp">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="Date"
+                    android:src="@drawable/datepic" />
 
-                    <LinearLayout
-                        android:layout_width="48dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center">
-
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/datepic" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center_vertical">
-
-                        <TextView
-                            android:id="@+id/textView4"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="24/05/2021" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="46dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center">
-
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/hourpic" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="139dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center_vertical">
-
-                        <TextView
-                            android:id="@+id/textView5"
-                            android:layout_width="86dp"
-                            android:layout_height="wrap_content"
-                            android:text="22:30" />
-                    </LinearLayout>
-
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/textViewFecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="24/05/2021" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:paddingStart="15dp"
-                android:gravity="center_vertical">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="Hour"
+                    android:src="@drawable/hourpic" />
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/textViewHora"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Title" />
+                    android:layout_marginStart="8dp"
+                    android:text="22:30" />
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Title"
+                android:textSize="16dp"/>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="85dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingEnd="8dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="36dp"
-                android:orientation="vertical"
-                android:layout_gravity="center">
+            <CheckBox
+                android:id="@+id/checkbox_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:text="" />
 
-                <ImageView
-                    android:layout_width="28dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="bottom"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="2dp"
-                    android:src="@drawable/editpic" />
-            </LinearLayout>
+            <ImageButton
+                android:id="@+id/edit_task"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="Edit"
+                android:src="@drawable/editpic" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_gravity="center">
-
-                <ImageView
-                    android:layout_width="28dp"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="2dp"
-                    android:src="@drawable/deletepic" />
-            </LinearLayout>
+            <ImageButton
+                android:id="@+id/delete_task"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="Delete"
+                android:src="@drawable/deletepic" />
         </LinearLayout>
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

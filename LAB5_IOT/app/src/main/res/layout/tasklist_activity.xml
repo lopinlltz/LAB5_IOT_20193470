@@ -36,7 +36,7 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/buttonCrear"
                 android:layout_width="329dp"
                 android:layout_height="wrap_content"
                 android:text="Añadir tarea (+)" />
